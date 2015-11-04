@@ -20,6 +20,7 @@
 #' \dontrun{
 #' install_git("git://github.com/hadley/stringr.git")
 #' install_git("git://github.com/hadley/stringr.git", branch = "stringr-0.2")
+#' }
 #' @param dependencies \code{NA} (the default) has the same behavior as
 #'   \code{install.packages} (installs "Depends", "Imports", and "LinkingTo").
 #'   See the documentation for
@@ -32,7 +33,7 @@
 #' library rather than the project private library.
 #'
 #' @export
-install_github <-function(url, subdir = NULL, branch = NULL, args = character(0),
+install_git <-function(url, subdir = NULL, branch = NULL, args = character(0),
                           ...) {
   # look for devtools in the original libs and prompt to install if necessary
   origLibPaths <- .packrat_mutables$get("origLibPaths")
